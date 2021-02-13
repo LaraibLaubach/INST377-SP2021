@@ -1,11 +1,14 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
 
-.body{
-    
+body{
+    width: 70%;
+    min-width: 800px;
+    margin: 48px auto;
+    background-color: #f9fafa;
 }
 
- .carousel{
+.carousel{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -14,9 +17,9 @@
     border-radius: 3px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     transition: background-image 0.8s ease-in-out;
- }
+}
 
- .carousel.image-container{
+.carousel.image-container{
     display: none;
- }
+}
 
