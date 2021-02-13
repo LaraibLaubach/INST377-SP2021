@@ -6,13 +6,13 @@ let list = package.querySelector("ul")
 let listElems = package.querySelectorAll("li")
 let position = 0;
 
-package.querySelector(".prev").onclick = function () {
+package.querySelector(".left").onclick = function () {
     position += width * count;
     position = Math.min(position, 0);
     list.style.marginLeft = position + "px";
 };
 
-package.querySelector(".next").onclick = function () {
+package.querySelector(".right").onclick = function () {
     position -= width * count;
     position = Math.max(position, -width * (listElems.length - ciunt));
     list.style.marginLeft = position + "px";
