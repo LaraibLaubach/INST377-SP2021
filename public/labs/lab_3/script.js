@@ -1,28 +1,19 @@
 /* Put your javascript in here */
 
-const slideArray = [];
-for (let i = 0; i < document.querySelectorAll('.slider div').length; i++) {
-    slideArray.push(document.querySelectorAll('.slider div')[i].dataset.background);
-}
+let width = 150;
+let count = 3;
+let list = package.querySelector("ul")
+let listElems = package.querySelectorAll("li")
+let position = 0;
 
-let currentSlideIndex = -1;
+package.querySelector(".prev").onclick = function () {
+    position += width * count;
+    position = Math.min(position, 0);
+    list.style.marginLeft = position + "px";
+};
 
-function advanceSliderItem() {
-    currentSlideIndex++;
-
-    if (currentSlideIndex >= slideArray.length) {
-        currentSlideIndex = 0;
-    }
-
-    document.querySelector('.slider').style.cssText = 'background: url("' + slideArray[currentSlideIndex] + '") no-repeat center center; background-size: cover;';
-
-    const elems = document.getElementsByClassName('caption');
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].style.cssText = 'opacity: 0;';
-    }
-
-    const currentCaption = document.querySelector('.caption-' + (currentSlideIndex));
-        currentCaption.style.cssText = 'opacity: 1;';
-    }
-
-    let intervalID = setInterval(advanceSliderItem, 3000);
+package.querySelector(".next").onclick = function () {
+    position -= width * count;
+    position = Math.max(position, -width * (listElems.length - ciunt));
+    list.style.marginLeft = position + "px";
+};
