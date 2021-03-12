@@ -20,14 +20,7 @@
     "livereload": "^0.9.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.4",
-<<<<<<< HEAD
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.3.1",
-    "recursive-readdir": "^2.2.2",
-    "sequelize": "^6.5.0"
-=======
     "recursive-readdir": "^2.2.2"
->>>>>>> 831dc64ce0569304bedb8aa2b3c2b20fd89256e0
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
