@@ -29,11 +29,7 @@ async function dataHandler(mapFromLeaflet) {
     const topFive = filtered.slice(0, 5);
     console.table(topFive);
     targetList.innerHTML = "";
-    /* if(topFive.length<1){
-      replyMessage.classList.add('box');
-      replyMessage.innerText = "no matches found";
-    } else {
-    */
+    
     topFive.forEach((item) => {
       const longLat = item.geocoded_column_1.coordinates;
       const marker = L.marker([longLat[1], longLat[0]]).addTo(mapFromLeaflet);
@@ -47,14 +43,7 @@ async function dataHandler(mapFromLeaflet) {
     mapFromLeaflet.panTo([coordinates[1], coordinates[0]], 0);
   });
 }
-/*
-search.addEventListener('input', (event) => {
-  if(search.value.length===0){
-    replyMessage.innerText='';
-    replyMessage.classList.remove('box');
-  }
-  });
-*/
+
 async function windowActions() {
   const map = mapInit();
   await dataHandler(map);
